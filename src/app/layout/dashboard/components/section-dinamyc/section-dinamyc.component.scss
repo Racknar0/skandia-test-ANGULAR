@@ -1,0 +1,251 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.dinamyc-container {
+  width: 100%;
+  min-height: 46rem;
+  background-color: black;
+  background-image: url("../../../../../assets/background-dynamic.jpg");
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  overflow: hidden;
+
+
+
+
+  @include media-query(desktop) {
+
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+
+  @include media-query(desktopL) {
+
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
+
+  .medal {
+    position: absolute;
+    left: 15rem;
+    top: 0rem;
+    width: 60px;
+    height: 60px;
+  }
+
+  .recomendados-container {
+    position: absolute;
+    top: 2rem;
+    left: 22rem;
+
+    background-color: $orange-1;
+    max-width: 53%;
+    margin-left: auto;
+    padding: 0.2rem;
+    border-radius: 3px;
+
+    p {
+      color: $white;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.1rem;
+      font-weight: $semibold;
+      text-align: center;
+      margin-bottom: 0rem;
+    }
+  }
+
+  .dinamyc-box {
+    height: 100%;
+    min-height: 46rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8rem;
+    @include media-query(desktop) {
+      padding-top: 0rem;
+      flex-direction: row;
+
+    }
+
+
+    .title-box {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 2rem;
+
+      @include media-query(desktop) {
+        width: 50%;
+        align-items: flex-start;
+        margin-bottom: 0rem;
+      }
+
+
+      h3 {
+        color: $black-1;
+        font-family: "Montserrat", sans-serif;
+        font-size: 2.5rem;
+        font-weight: $bold;
+        margin-bottom: 0rem;
+        line-height: 3rem;
+        max-width: 80rem;
+        text-align: center;
+
+        @include media-query(desktop) {
+          max-width: 40rem;
+
+        }
+
+        .orange {
+          color: $orange-1;
+        }
+      }
+    }
+
+    .slider-dynamic {
+      width: 100%;
+
+      @include media-query(desktop) {
+        width: 50%;
+        align-items: flex-start;
+      }
+
+
+      .card-container {
+        width: 350px;
+        background-color: $white;
+
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        min-height: 38.5rem;
+
+        &.bd-blue-3 {
+          border-bottom: 5px solid $blue-3;
+        }
+
+        &:hover {
+          box-shadow: 0px 0px 6px #00c53c;
+        }
+
+        .card-header {
+          height: 15rem;
+          background-image: url("../../../../../assets/dog.png");
+          background-size: cover;
+          background-position: center;
+          position: relative;
+
+          .ahorro-container {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+
+            background-color: $blue-4;
+            max-width: 60%;
+            margin-left: auto;
+            padding: 0.2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            border-radius: 3px;
+
+            p {
+              color: $black-2;
+              font-family: "Montserrat", sans-serif;
+              font-size: 1.1rem;
+              font-weight: $bold;
+              text-align: center;
+              margin-bottom: 0rem;
+            }
+          }
+
+          .heart-container{
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+
+
+            img {
+              filter: brightness(0) saturate(100%) invert(54%) sepia(22%) saturate(4839%) hue-rotate(100deg) brightness(99%) contrast(101%);
+              width: 28px;
+              height: 28px;
+              cursor: pointer;
+
+              &:hover {
+                filter: brightness(0) saturate(100%) invert(57%) sepia(95%) saturate(2038%) hue-rotate(0deg) brightness(104%) contrast(105%);
+              }
+            }
+          }
+
+        }
+
+        .card-body {
+          padding: 2rem;
+
+
+          .title-card{
+            color: $black-1;
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.8rem;
+            font-weight: $regular;
+            margin-bottom: 0rem;
+            line-height: 2.4rem;
+
+            span{
+              font-weight: $bold;
+            }
+          }
+
+          .link {
+            display: inline-block;
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.6rem;
+            font-weight: $medium;
+            color: $green-1;
+            margin-top: 1.2rem;
+            margin-bottom: 2.3rem;
+
+            &:hover {
+              color: $orange-1;
+            }
+          }
+
+          .info-container{
+            display: flex;
+
+            &.money{
+              margin-bottom: 1.5rem;
+            }
+
+            .world, .profile{
+              width: 16px;
+              height: 16px;
+            }
+
+            p{
+              color: $black-1;
+              font-family: "Montserrat", sans-serif;
+              font-size: 1.2rem;
+              font-weight: $medium;
+              margin-bottom: 0rem;
+              margin-left: 0.7rem;
+
+              span {
+                font-weight: $bold;
+              }
+            }
+          }
+
+
+        }
+      }
+    }
+  }
+}

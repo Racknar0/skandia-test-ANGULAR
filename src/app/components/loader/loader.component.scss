@@ -1,0 +1,48 @@
+@import '../../styles/variables';
+
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.92);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Inicialmente oculto */
+  visibility: hidden; /* Inicialmente oculto */
+  display: none; /* Inicialmente oculto */
+
+  &.show {
+    display: flex; /* Mostrar */
+    animation: fadeIn 0.5s ease forwards; /* Animación para mostrar y ocultar */
+  }
+
+  .loader {
+    border: 16px solid $white;
+    border-top: 16px solid $green-1;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite, fadeIn 3s ease forwards; /* Múltiples animaciones */
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

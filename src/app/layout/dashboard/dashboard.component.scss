@@ -1,0 +1,121 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.nav-container {
+  height: 8rem;
+
+  .brand-container {
+    .logo-container {
+      border-right: 3px solid $black-2;
+      height: 3rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      @include media-query(mobile) {
+
+        padding-left: 6rem;
+      }
+
+      .logo {
+        cursor: pointer;
+      }
+    }
+    h2 {
+      margin-bottom: 0rem;
+      font-size: 1.8rem;
+      margin-left: 2rem;
+      color: $black-2;
+      margin-top: 0.5rem;
+      font-family: "Montserrat", sans-serif;
+    }
+  }
+
+  .info-container {
+    margin-left: auto;
+    margin-right: 6rem;
+    display: none;
+    gap: 3rem;
+
+    @include media-query(desktop) {
+
+      display: flex;
+    }
+
+
+    .financial-container,
+    .aportes-container {
+      a {
+        font-size: 1.4rem;
+        margin-bottom: 0rem;
+        font-weight: $bold;
+        font-family: Verdana, sans-serif;
+        color: $green-1;
+
+        &:hover {
+          color: $orange-1;
+        }
+      }
+    }
+
+    .faq-container{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      width: 14rem;
+
+      &:hover {
+        a {
+          display: block;
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+
+      .faq {
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          transform: scale(0.7);
+        }
+      }
+      a {
+        font-size: 1.1rem;
+        margin-bottom: 0rem;
+        font-weight: $bold;
+        font-family: Verdana, sans-serif;
+        color: $green-1;
+        width: 10rem;
+        display: none;
+
+        &:hover {
+          color: $orange-1;
+        }
+      }
+    }
+
+
+  }
+}
+
+
+
+.drawer-container {
+  width: 100vw;
+  height: calc(100vh - 8rem);
+
+  .mat-drawer-shown{
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .mat-drawer {
+    border: none;
+    background-color: $gray-3;
+
+  }
+
+  .sidenav-content{
+    margin-left: 5.7rem;
+  }
+}

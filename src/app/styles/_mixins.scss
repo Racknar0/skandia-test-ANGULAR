@@ -1,0 +1,161 @@
+// Mediaqueries
+@mixin media-query($media-query) {
+  @if $media-query ==mobilex {
+    @media only screen and (min-width: $mobilex) {
+      @content;
+    }
+  }
+
+  @if $media-query ==maxmobilex {
+    @media only screen and (max-width: $mobilex) {
+      @content;
+    }
+  }
+
+  @if $media-query ==mobilexl {
+    @media only screen and (min-width: $mobilexl) {
+      @content;
+    }
+  }
+
+  @if $media-query ==maxmobilexl {
+    @media only screen and (max-width: $mobilexl) {
+      @content;
+    }
+  }
+
+  @if $media-query ==mobile {
+    @media only screen and (min-width: $mobile) {
+      @content;
+    }
+  }
+
+  @if $media-query ==maxmobile {
+    @media only screen and (max-width: $mobile) {
+      @content;
+    }
+  }
+
+  @if $media-query ==tablet {
+    @media only screen and (min-width: $tablet) {
+      @content;
+    }
+  }
+
+  @if $media-query ==maxtablet {
+    @media only screen and (max-width: $tablet) {
+      @content;
+    }
+  }
+
+  @if $media-query ==desktop {
+    @media only screen and (min-width: $desktop) {
+      @content;
+    }
+  }
+
+  @if $media-query ==maxdesktop {
+    @media only screen and (max-width: $desktop) {
+      @content;
+    }
+  }
+
+  @if $media-query ==desktopL {
+    @media only screen and (min-width: $desktopL) {
+      @content;
+    }
+  }
+
+  @if $media-query ==maxdesktopL {
+    @media only screen and (max-width: $desktopL) {
+      @content;
+    }
+  }
+
+  @if $media-query ==desktopLS {
+    @media only screen and (min-width: $desktopLS) {
+      @content;
+    }
+  }
+
+  @if $media-query ==maxdesktopLS {
+    @media only screen and (max-width: $desktopLS) {
+      @content;
+    }
+  }
+
+  @if $media-query ==desktopXL {
+    @media only screen and (min-width: $desktopXL) {
+      @content;
+    }
+  }
+
+  @if $media-query ==maxdesktopXL {
+    @media only screen and (max-width: $desktopXL) {
+      @content;
+    }
+  }
+
+    /*********  desktopXXL ***************/
+    @if $media-query ==desktopXXL {
+      @media only screen and (min-width: $desktopXXL) {
+        @content;
+      }
+    }
+
+    @if $media-query ==maxdesktopXXL {
+      @media only screen and (max-width: $desktopXXL) {
+        @content;
+      }
+    }
+
+
+    /*********  desktopXXL ***************/
+    @if $media-query ==desktopXXXL {
+      @media only screen and (min-width: $desktopXXXL) {
+        @content;
+      }
+    }
+
+    @if $media-query ==maxdesktopXXXL {
+      @media only screen and (max-width: $desktopXXXL) {
+        @content;
+      }
+    }
+}
+
+// Text fluid responsive
+@mixin fluid-font-size($min-value, $max-value, $min-vw: 41rem, $max-vw: 192rem) {
+  $factor: 1 / ($max-vw - $min-vw) * ($max-value - $min-value);
+  $calc-value: unquote('#{ $min-value - ($min-vw * $factor) } + #{ 100vw * $factor }');
+
+  font-size: $min-value; // Fallback for older browsers
+  font-size: clamp(#{if($min-value > $max-value, $max-value, $min-value)}, #{$calc-value}, #{if($min-value > $max-value, $min-value, $max-value)});
+}
+
+// line-height fluid responsive
+@mixin fluid-line-height($min-value, $max-value, $min-vw: 41rem, $max-vw: 192rem) {
+  $factor: 1 / ($max-vw - $min-vw) * ($max-value - $min-value);
+  $calc-value: unquote('#{ $min-value - ($min-vw * $factor) } + #{ 100vw * $factor }');
+
+  line-height: $min-value; // Fallback for older browsers
+  line-height: clamp(#{if($min-value > $max-value, $max-value, $min-value)}, #{$calc-value}, #{if($min-value > $max-value, $min-value, $max-value)});
+}
+
+// Height fluid responsive
+@mixin fluid-height-font($min-value, $max-value, $min-vw: 41rem, $max-vw: 192rem) {
+  $factor: 1 / ($max-vw - $min-vw) * ($max-value - $min-value);
+  $calc-value: unquote('#{ $min-value - ($min-vw * $factor) } + #{ 100vw * $factor }');
+
+  height: $min-value; // Fallback for older browsers
+  height: clamp(#{if($min-value > $max-value, $max-value, $min-value)}, #{$calc-value}, #{if($min-value > $max-value, $min-value, $max-value)});
+}
+
+// Width fluid responsive
+@mixin fluid-width-font($min-value, $max-value, $min-vw: 41rem, $max-vw: 192rem) {
+  $factor: 1 / ($max-vw - $min-vw) * ($max-value - $min-value);
+  $calc-value: unquote('#{ $min-value - ($min-vw * $factor) } + #{ 100vw * $factor }');
+
+  width: $min-value; // Fallback for older browsers
+  width: clamp(#{if($min-value > $max-value, $max-value, $min-value)}, #{$calc-value}, #{if($min-value > $max-value, $min-value, $max-value)});
+}

@@ -1,0 +1,60 @@
+<nav class="nav-container d-flex align-items-center">
+  <button
+    mat-icon-button
+    class="d-flex justify-content-center align-items-center"
+    aria-label="Example icon-button with menu icon"
+    (click)="isExpanded = !isExpanded"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <div class="brand-container d-flex align-items-center">
+    <div class="logo-container d-flex align-items-center">
+      <img class="logo" src="assets/logo.svg" alt="Skandia Logo" />
+    </div>
+    <h2>Plan Financiero Digital - FPX</h2>
+  </div>
+
+  <div class="info-container">
+    <div class="financial-container d-flex align-items-center gap-3">
+      <img src="assets/Happy.svg" alt="happy" />
+      <a routerLink="/dashboard/aportes">Tu Financial Planner</a>
+    </div>
+    <div class="aportes-container d-flex align-items-center gap-3">
+      <img src="assets/hand3.svg" alt="hand" />
+      <a routerLink="/dashboard/aportes">Aportes</a>
+    </div>
+
+    <div class="faq-container">
+      <img src="assets/faq.svg" alt="faq" class="faq" />
+      <a>Plan Financiero Digital - FPX</a>
+    </div>
+  </div>
+</nav>
+<!-- desactivar el backdrop -->
+<mat-sidenav-container class="drawer-container" autosize>
+  <mat-sidenav #sidenav class="drawer-sidenav" mode="over" opened="true" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()" [disableClose]="true" >
+    <app-menu-items
+        [isExpanded]="isExpanded"
+        [showSubmenu]="showSubmenu"
+        [isShowing]="isShowing"
+        [showSubSubMenu]="showSubSubMenu"
+    ></app-menu-items>
+  </mat-sidenav>
+
+  <div class="sidenav-content">
+    <div class="content-container">
+      <app-sky></app-sky>
+      <app-main-card></app-main-card>
+
+      <app-section-slider></app-section-slider>
+
+      @if(showDinamycComponent){
+        <app-section-dinamyc></app-section-dinamyc>
+      }
+      <app-footer></app-footer>
+
+    </div>
+
+  </div>
+</mat-sidenav-container>

@@ -1,0 +1,51 @@
+@import "../../../../styles/variables";
+
+.mat-nav-list {
+  padding: 0rem;
+  height: 5.5rem;
+
+  &.active {
+    background-color: $green-1;
+    .item-container {
+      .item {
+        .text-container {
+          p {
+            color: $white;
+          }
+        }
+      }
+    }
+    .text-container {
+      p {
+        color: $white;
+      }
+    }
+  }
+  .item-container {
+    height: 100%;
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 2.5rem;
+
+      &:hover {
+        p {
+          text-decoration: underline;
+        }
+      }
+
+      .text-container {
+        margin-left: 2.5rem;
+        p {
+          margin-bottom: 0rem;
+          font-family: "Montserrat", sans-serif;
+          width: 18rem;
+          font-size: 1.6rem;
+          font-weight: $semibold;
+          color: $black-2;
+        }
+      }
+    }
+  }
+}

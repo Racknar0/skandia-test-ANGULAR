@@ -1,0 +1,133 @@
+<div class="section-slider-container">
+  <div class="title-container">
+    <h4>
+      ¡Vamos por esos <span>$6.000.000</span> para
+      <span>Conocer mi sobrino</span>!
+    </h4>
+    <p class="subtitle">
+      ¡A través de tus prodcutos y nuestros rendimientos podremos lograrlo!
+    </p>
+    <p class="subtitle-2">
+      Asocia tus productos o adquiere uno nuevo.
+      <img src="assets/icons/interrogation.svg" alt="" />
+    </p>
+  </div>
+
+  <owl-carousel-o class="slider-container" [options]="customOptions">
+
+    @for (card of listCards; track $index) {
+
+      <ng-template carouselSlide>
+        <div class="card-container bd-green">
+          <div class="custom-checkbox">
+            <input type="checkbox" id="checkbox-1" class="check" />
+          </div>
+          <p class="type">{{card.nameProduct}}</p>
+          <p class="number">#{{card.numberProduct}}</p>
+          <p class="type amount">Ya cuentas con:</p>
+          <p class="quantity">${{card.balanceProduct}}</p>
+
+          <div class="box-info">
+            <img src={{card.srcImg}} alt="" class="image" />
+            <p class="text-box-info">
+            <!--  ¡Cuentas con <span class="orange">$2.120.000</span> para tu
+              objetivo! Te recomendamos aportar
+              <span class="strong">$388.000 mensuales</span> para lograrlo en
+              <span class="strong">diciembre del 2022.</span> -->
+              {{card.detaildProduct}}
+            </p>
+          </div>
+        </div>
+      </ng-template>
+
+    }
+
+    <!--
+     DATA HARDCODED PARA MOSTRAR LOS ESTILOS DE LOS CARDS
+    -->
+
+    <ng-template carouselSlide>
+      <div class="card-container bd-green">
+        <div class="custom-checkbox">
+          <input type="checkbox" id="checkbox-1" class="check" />
+        </div>
+        <p class="type">FIC Efectivo</p>
+        <p class="number">#6000000986159</p>
+        <p class="type amount">Ya cuentas con:</p>
+        <p class="quantity">$2.120.000</p>
+
+        <div class="box-info">
+          <img src="assets/icons/happy-card.svg" alt="" class="image" />
+          <p class="text-box-info">
+            ¡Cuentas con <span class="orange">$2.120.000</span> para tu
+            objetivo! Te recomendamos aportar
+            <span class="strong">$388.000 mensuales</span> para lograrlo en
+            <span class="strong">diciembre del 2022.</span>
+          </p>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template carouselSlide>
+      <div class="card-container bd-blue-2">
+        <div class="custom-checkbox">
+          <input type="checkbox" id="checkbox-1" class="check" />
+        </div>
+        <p class="type">FIC Efectivo</p>
+        <p class="number">#6000000986159</p>
+        <p class="type amount">Ya cuentas con:</p>
+        <p class="quantity">$2.120.000</p>
+
+        <div class="box-info">
+          <img src="assets/icons/trofeo-card.svg" alt="" class="image" />
+          <p class="text-box-info">
+            ¡Súper ya tienes los <span class="orange">$6.000.000</span> para tu
+            objetivo!
+
+            <span class="strong">Úsalos cuando lo desees</span>
+          </p>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template carouselSlide>
+      <div class="card-container bd-blue-1">
+        <div class="custom-checkbox">
+          <input type="checkbox" id="checkbox-1" class="check" />
+        </div>
+        <p class="type">FIC Efectivo</p>
+        <p class="number">#6000000986159</p>
+        <p class="type amount">Ya cuentas con:</p>
+        <p class="quantity">$2.120.000</p>
+
+        <div class="box-info">
+          <img src="assets/icons/hand-hearth-card.svg" alt="" class="image" />
+          <p class="text-box-info">
+            ¡Ya tienes los <span class="orange">$6.000.000</span> para tu
+            objetivo! Úsalos desde el <span class="strong">16/nov/27</span> que
+            finaliza la vigencia de tu póliza.
+          </p>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template carouselSlide>
+      <div class="card-container orange-2 card-bg">
+        <img src="assets/icons/medal.svg" alt="" class="medal" />
+        <div class="recomendados-container">
+          <p>Productos recomendados</p>
+        </div>
+        <p class="type image">
+          ¡Conoce nuevos productos de ahorro e inversión para
+          <span class="orange">Conocer sobrino!</span>
+        </p>
+        <input class="btn-explore" type="button" value="EXPLORA AHORA" (click)="showDinamycComponentChange()"/>
+
+      </div>
+    </ng-template>
+  </owl-carousel-o>
+
+  <div class="btn-asociar">
+    ASOCIAR A OBJETIVO
+  </div>
+</div>

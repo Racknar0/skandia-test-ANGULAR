@@ -1,0 +1,146 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.main-card-container {
+  max-width: 53rem;
+  box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 3.2rem;
+  position: relative;
+  z-index: 1;
+  background-color: $white;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: -3rem;
+
+  @include media-query(tablet) {
+    margin: 0 auto;
+    margin-top: -10rem;
+  }
+
+  @media only screen and (min-width: 606px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main-card-text {
+    display: flex;
+    justify-content: space-between;
+
+    .main-text {
+      font-size: 2.4rem;
+      font-weight: 500;
+      color: $black-1;
+      font-family: "Montserrat", sans-serif;
+
+      h3 {
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: $black-2;
+        font-weight: $bold;
+        font-family: "Montserrat", sans-serif;
+        margin-bottom: 0.2rem;
+      }
+
+      p {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: $black-2;
+        font-weight: $bold;
+        font-family: "Montserrat", sans-serif;
+        margin-bottom: 0rem;
+      }
+    }
+
+    .link-container {
+      a {
+        color: $green-1;
+        font-size: 1.4rem;
+        font-weight: $semibold;
+        font-family: "Montserrat", sans-serif;
+
+        &:hover {
+          color: $orange-1;
+        }
+      }
+    }
+  }
+
+  .info-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2.4rem;
+
+    @media only screen and (min-width: 606px) {
+      gap: 5rem;
+    }
+
+    .info-box {
+      .title-box {
+        margin-bottom: 0rem;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.4rem;
+        font-weight: $medium;
+
+        img {
+          margin-top: -0.2rem;
+        }
+      }
+
+      .box {
+        padding: 0.2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: 0.5rem;
+
+        &.date-box {
+          background-color: $blue-2;
+        }
+
+        &.goal-box {
+          background-color: $orange-3;
+        }
+
+        &.amount-box {
+          background-color: $green-2;
+        }
+
+        p {
+          margin-bottom: 0rem;
+          font-family: "Montserrat", sans-serif;
+          font-size: 1.4rem;
+          text-align: center;
+          font-weight: $bold;
+          color: $black-2;
+        }
+      }
+    }
+  }
+
+  .cta-container {
+    margin-top: 4.3rem;
+
+    a {
+      color: $green-1;
+      font-size: 1.5rem;
+      font-weight: $bold;
+      display: inline-block;
+      margin-left: 1rem;
+      margin-bottom: 2.3rem;
+
+      &:hover {
+        color: $orange-1;
+      }
+    }
+  }
+
+  .montains {
+    position: absolute;
+    bottom: 0rem;
+    right: 0;
+    z-index: -1;
+  }
+}

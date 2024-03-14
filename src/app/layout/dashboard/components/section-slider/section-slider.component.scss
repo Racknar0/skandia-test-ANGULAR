@@ -1,0 +1,274 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+
+.section-slider-container {
+  margin-top: 4.5rem;
+
+  position: relative;
+  margin-left: 2rem;
+  padding-bottom: 4rem;
+
+  @include media-query(mobile) {
+    margin-left: 5rem;
+    padding-left: 4rem;
+  }
+
+
+  .title-container {
+    padding: 0 2rem;
+
+    h4 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 2.5rem;
+      font-weight: $bold;
+      margin-bottom: 1.5rem;
+      color: $black-2;
+      text-align: center;
+
+      span {
+        color: $orange-1;
+      }
+    }
+
+    .subtitle {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.5rem;
+      font-weight: $medium;
+      color: $black-2;
+      text-align: center;
+      margin-bottom: 0rem;
+    }
+
+    .subtitle-2 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.6rem;
+      font-weight: $bold;
+      color: $black-2;
+      text-align: center;
+      margin-bottom: 2rem;
+
+      img {
+        margin-left: 0.7rem;
+      }
+    }
+  }
+
+
+  .slider-container, .owl-item {
+    width: 100%;
+    height: 100px;
+
+
+
+    .card-container {
+      width: 350px;
+      background-color: $white;
+      padding: 2rem;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      min-height: 38.5rem;
+
+      &.bd-green{
+        border-bottom: 5px solid $green-3;
+      }
+
+      &.bd-blue-1{
+        border-bottom: 5px solid $blue-1;
+      }
+
+      &.bd-blue-2{
+        border-bottom: 5px solid $blue-2;
+      }
+
+      &.orange-2{
+        border-bottom: 5px solid $orange-2;
+      }
+
+      &:hover {
+        box-shadow: 0px 0px 6px #00C53C;
+      }
+
+
+
+
+
+
+      .custom-checkbox {
+        .check {
+          margin-left: auto;
+          cursor: pointer;
+        }
+      }
+
+      .type {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.8rem;
+        font-weight: $bold;
+        color: $black-2;
+        margin-bottom: 0.5rem;
+        margin-top: 3rem;
+        line-height: 1.2;
+
+        &.image{
+          max-width: 90%;
+        }
+
+        .orange{
+          color: $orange-1;
+        }
+
+        &.amount {
+          margin-top: 2rem;
+          margin-bottom: 0rem;
+        }
+      }
+
+      .number {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.8rem;
+        font-weight: $medium;
+        color: $black-2;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid $gray-2;
+      }
+
+      .quantity {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.6rem;
+        font-weight: $medium;
+        color: $green-1;
+        margin-top: 0rem;
+      }
+
+      .box-info {
+        background-color: $gray-4;
+        padding: 1rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        margin-top: 5rem;
+        margin-bottom: 0.5rem;
+        position: relative;
+        min-height: 80px;
+        border-radius: 3px;
+
+        .image{
+          width: 35px;
+          height: 35px;
+          position: absolute;
+          top: -25px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+
+        p {
+          color: $black-1;
+          font-family: "Montserrat", sans-serif;
+          font-size: 1.2rem;
+          text-align: center;
+          margin-bottom: 0rem;
+          font-weight: $medium;
+
+          .orange {
+            color: $orange-1;
+            font-weight: $bold;
+          }
+          .strong {
+            font-weight: $bold;
+          }
+        }
+      }
+
+      &.card-bg {
+        background-image: url("../../../../../assets/background-card.jpg");
+        background-size: cover;
+        background-position: center;
+
+        .medal{
+          position: absolute;
+          top: 1rem;
+          left: 2rem;
+          width: 40px;
+          height: 40px;
+        }
+
+        .recomendados-container{
+          background-color: $orange-1;
+          max-width: 53%;
+          margin-left: auto;
+          padding: 0.2rem;
+          border-radius: 3px;
+          margin-top: 0.4rem;
+
+          p {
+            color: $white;
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.1rem;
+            font-weight: $semibold;
+            text-align: center;
+            margin-bottom: 0rem;
+          }
+        }
+
+        .btn-explore{
+          background-color: $green-1;
+          color: $white;
+          font-family: "Montserrat", sans-serif;
+          font-size: 1.4rem;
+          font-weight: $semibold;
+          padding: 0.8rem 1.5rem;
+          border-radius: 18px;
+          margin-top: 2rem;
+          display: block;
+          text-align: center;
+          cursor: pointer;
+          transition: 0.3s;
+          border: none;
+          text-decoration: underline;
+          position: relative;
+          z-index: 1;
+
+          &:hover {
+            background-color: $orange-1;
+          }
+        }
+      }
+
+    }
+  }
+
+
+  .btn-asociar{
+    background-color: $gray-2;
+    color: $black-2;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+    font-weight: $bold;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    margin-top: 4rem;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    position: relative;
+    z-index: 1;
+    width: 26rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: $green-1;
+    }
+  }
+
+}
+

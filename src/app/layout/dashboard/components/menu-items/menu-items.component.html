@@ -1,0 +1,72 @@
+<mat-nav-list class="mat-nav-list active">
+  <mat-list-item (click)="showSubmenu = !showSubmenu" class="item-container">
+    <div class="item">
+      <div class="icon-container">
+        <img src="assets/icons/home.svg" alt="home" />
+      </div>
+      <div *ngIf="isExpanded || isShowing" class="text-container">
+        <p>Home</p >
+      </div>
+    </div>
+  </mat-list-item>
+</mat-nav-list>
+<mat-nav-list class="mat-nav-list">
+  <mat-list-item (click)="showSubmenu = !showSubmenu" class="item-container">
+    <div class="item">
+      <div class="icon-container">
+        <img src="assets/icons/hoja1.svg" alt="contract" />
+      </div>
+      <div *ngIf="isExpanded || isShowing" class="text-container">
+        <p>Contratos</p >
+      </div>
+    </div>
+  </mat-list-item>
+</mat-nav-list>
+<mat-nav-list class="mat-nav-list">
+  <mat-list-item (click)="showSubmenu = !showSubmenu" class="item-container">
+    <div class="item">
+      <div class="icon-container">
+        <img src="assets/icons/Tool.svg" alt="contract" />
+      </div>
+      <div *ngIf="isExpanded || isShowing" class="text-container">
+        <p>Acciones</p >
+      </div>
+    </div>
+  </mat-list-item>
+</mat-nav-list>
+<mat-nav-list class="mat-nav-list">
+  <mat-list-item (click)="showSubmenu = !showSubmenu" class="item-container">
+    <div class="item">
+      <div class="icon-container">
+        <img src="assets/icons/star.svg" alt="contract" />
+      </div>
+      <div *ngIf="isExpanded || isShowing" class="text-container">
+        <p>Objetivos</p >
+      </div>
+    </div>
+  </mat-list-item>
+</mat-nav-list>
+<mat-nav-list class="mat-nav-list">
+  <mat-list-item (click)="showSubmenu = !showSubmenu" class="item-container">
+    <div class="item">
+      <div class="icon-container">
+        <img src="assets/icons/money.svg" alt="contract" />
+      </div>
+      <div *ngIf="isExpanded || isShowing" class="text-container">
+        <p>Herramientas</p >
+      </div>
+    </div>
+  </mat-list-item>
+</mat-nav-list>
+<mat-nav-list class="mat-nav-list">
+  <mat-list-item (click)="showSubmenu = !showSubmenu" class="item-container">
+    <div class="item">
+      <div class="icon-container">
+        <img src="assets/icons/talk2.svg" alt="contract" />
+      </div>
+      <div *ngIf="isExpanded || isShowing" class="text-container">
+        <p>Servicio al cliente</p >
+      </div>
+    </div>
+  </mat-list-item>
+</mat-nav-list>
