@@ -27,7 +27,7 @@
 
 <h3>🚀 Deploy link: </h3>
 
-> 🌎 [https://master--skandia-test.netlify.app/dashboard]
+> 🌎 [https://skandia-test.netlify.app]
 
 <img src="https://raw.githubusercontent.com/Racknar0/logos/master/coleccion-logos/rainbow.png" alt="css3" width="100%" height="6" />
 
